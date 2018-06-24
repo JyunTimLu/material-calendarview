@@ -1,5 +1,6 @@
 package com.prolificinteractive.materialcalendarview;
 
+import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.util.AttributeSet;
@@ -193,6 +194,7 @@ abstract class CalendarPagerView extends ViewGroup implements View.OnClickListen
             facadeAccumulator.reset();
             for (DecoratorResult result : decoratorResults) {
                 if (result.decorator.shouldDecorate(dayView.getDate())) {
+                    dayView.setTextColor(Color.WHITE);
                     result.result.applyTo(facadeAccumulator);
                 }
             }
